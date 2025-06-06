@@ -1,0 +1,25 @@
+@use 'styles/globals.scss';
+
+:root {
+    font-synthesis: none;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+body::before {
+    z-index: -1;
+    opacity: 1;
+    pointer-events: none;
+    background-repeat: repeat;
+    background-size: 100px;
+    filter: contrast(300%) brightness(150%);
+    mix-blend-mode: hard-light;
+}
