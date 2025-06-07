@@ -1,25 +1,37 @@
-/* Breakpoints */
+/* Window Breakpoints */
 $breakpoint-small: 380px;
 $breakpoint-medium: 640px;
 $breakpoint-large: 1200px;
 
-/* Colors */
-$color-white: #FFFFFF;
-$color-black: #000000;
-$color-default: #293244;
-$color-muted: #A0A9B8;
+/* Container Width */
 
-$color-surface5: #D0D4DC;
-$color-surface3: #F6F6F8;
+$container-small: 296px;
+$container-medium: 600px;
+$container-large: 904px;
+
+/* Colors */
+$color-surface1: #fff;
+$color-surface5: #d0d4dc;
+$color-surface3: #f6f6f8;
+
+$color-black: #000;
+$color-default: #293244;
+$color-muted: #a0a9b8;
 
 $color-disabled: #44537180;
 $color-disabled-btn: #4453711a;
 
-$color-blue: #45A5F6;
-$color-blue-60: #C7E4FC;
-$color-blue-50: #DAEDFD;
+$color-blue: #45a5f6;
+$color-blue-110: #007ee5;
+$color-blue-60: #c7e4fc;
+$color-blue-50: #daedfd;
 
-$color-red: #E12828;
-$color-red-50: #FADEE0;
+$color-red: #e12828;
+$color-red-50: #fadee0;
 
-$color-violet: #6447CF;
+$color-violet: #6447cf;
+
+/* Transition */
+$transition-default-duration: 0.3s;
+$transition-default-timing-function: ease-out;
+$transition-default: $transition-default-duration $transition-default-timing-function;
