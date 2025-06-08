@@ -1,3 +1,4 @@
+import { CreateSurveyDto, SurveyDto } from '@shared-types/survey';
 import { CreateUploadDto, UploadDto } from '@shared-types/upload';
 /*
     ---------------------------- 
@@ -5,7 +6,16 @@ import { CreateUploadDto, UploadDto } from '@shared-types/upload';
     ---------------------------- 
 */
 
-// POST
+// POST - /upload
+export type UploadImagesResponse = UploadDto;
 export type UploadImagesPayload = CreateUploadDto;
 
-export type UploadImagesResponse = UploadDto;
+/*
+    ---------------------------- 
+    --------- survey -----------
+    ---------------------------- 
+*/
+
+// POST - /upload-survey
+export type UploadSurveyResponse = SurveyDto;
+export type UploadSurveyPayload = CreateSurveyDto;

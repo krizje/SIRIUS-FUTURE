@@ -1,0 +1,26 @@
+@use '@styles/variables' as vars;
+@use '@styles/typography' as typography;
+
+.root {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    border-radius: 8px;
+    background: vars.$color-red-50;
+}
+
+.item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.text {
+    @include typography.Regular14;
+}
+
+.icon {
+    min-width: 32px;
+    height: 32px;
+}

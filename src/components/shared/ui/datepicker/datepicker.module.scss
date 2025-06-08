@@ -1,0 +1,40 @@
+@use '@styles/variables' as vars;
+@use '@styles/typography' as typography;
+
+.root {
+    width: fit-content;
+    padding: 12px;
+    border-radius: 6px;
+    box-shadow: 0 0 12px 0 rgba(vars.$color-black, 0.11);
+    background: vars.$color-surface1;
+}
+
+.day {
+    @include typography.Regular14;
+
+    padding: 8px 12px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.next,
+.prev {
+    svg {
+        width: 24px;
+        height: 24px;
+        fill: vars.$color-black;
+    }
+}
+
+.todayButton {
+    border-radius: 6px;
+    color: vars.$color-surface1;
+    background-color: vars.$color-violet;
+    cursor: pointer;
+}
+
+.captionLabel {
+    @include typography.Bold18;
+
+    word-spacing: 8px;
+}

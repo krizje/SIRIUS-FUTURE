@@ -1,9 +1,9 @@
 @use '@styles/variables' as vars;
 
 .root {
+    padding: 100px 0;
     width: 100%;
-    height: 100dvh;
-    background-color: vars.$color-surface3;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;

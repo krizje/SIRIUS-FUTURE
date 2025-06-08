@@ -1,0 +1,17 @@
+@use '@styles/variables' as vars;
+@use '@styles/typography' as typography;
+
+.root {
+    width: 100%;
+    padding: 48px 64px 64px;
+}
+
+.arrowRightIcon {
+    width: 24px;
+    height: 24px;
+}
+
+.chevronRightIcon {
+    width: 24px;
+    height: 24px;
+}

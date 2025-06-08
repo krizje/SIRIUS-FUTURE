@@ -1,0 +1,35 @@
+@use '@styles/typography' as typography;
+@use '@styles/variables' as vars;
+
+.root {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 64px;
+}
+
+.step {
+    @include typography.Bold14;
+
+    color: vars.$color-muted;
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+}
+
+button.backButton {
+    background: vars.$color-blue-50;
+    color: vars.$color-default;
+
+    &:hover {
+        background: vars.$color-blue-70;
+    }
+}
+
+.chevronLeftIcon {
+    width: 24px;
+    height: 24px;
+    color: vars.$color-default;
+}

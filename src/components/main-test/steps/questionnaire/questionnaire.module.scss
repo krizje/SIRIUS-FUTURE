@@ -1,0 +1,56 @@
+@use '@styles/variables' as vars;
+@use '@styles/typography' as typography;
+
+.root {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.childInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.title {
+    @include typography.Title20Bold;
+
+    color: vars.$color-black;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.dateInput {
+    @include typography.Regular14;
+
+    max-width: 103px;
+}
+
+.dateWrapper {
+    position: relative;
+}
+
+.datePickerWrapper {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: calc(67px + 4px);
+}
+
+.radioGroupWrapper,
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.radioGroup {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}

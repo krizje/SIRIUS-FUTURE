@@ -16,10 +16,9 @@ body {
     padding: 0;
     scroll-behavior: smooth;
     line-height: 1.25;
-    background-color: vars.$color-surface1;
     position: relative;
     color: vars.$color-default;
-    overflow: hidden;
+    height: 100%;
 }
 
 a {

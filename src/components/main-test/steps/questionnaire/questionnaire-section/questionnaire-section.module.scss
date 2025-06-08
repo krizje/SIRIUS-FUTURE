@@ -1,0 +1,34 @@
+@use '@styles/variables' as vars;
+@use '@styles/typography' as typography;
+
+.root {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.title {
+    @include typography.Title20Bold;
+
+    color: vars.$color-black;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.question {
+    @include typography.Regular16;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.radioGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}

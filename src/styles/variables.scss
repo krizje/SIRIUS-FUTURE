@@ -23,6 +23,7 @@ $color-disabled-btn: #4453711a;
 
 $color-blue: #45a5f6;
 $color-blue-110: #007ee5;
+$color-blue-70: #b5dbfb;
 $color-blue-60: #c7e4fc;
 $color-blue-50: #daedfd;
 
@@ -35,3 +36,9 @@ $color-violet: #6447cf;
 $transition-default-duration: 0.3s;
 $transition-default-timing-function: ease-out;
 $transition-default: $transition-default-duration $transition-default-timing-function;
+
+/* box shadow */
+
+@mixin shadow {
+    box-shadow: 0 0 10px rgba($color-black, 0.1);
+}
