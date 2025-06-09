@@ -149,7 +149,7 @@ export const FormControls: FC = () => {
             Узнать результаты{' '}
             {isUploadSurveyLoading ? <Loader /> : <Icon name="chevron_right" className={styles.chevronRightIcon} />}
         </Button>,
-        <Button key={'share'} onClick={handleShare}>
+        <Button key={'share'} onClick={handleShare} classes={{ root: styles.shareButton }}>
             Поделиться результатами
             {isUploadSurveyLoading ? <Loader /> : <Icon name="share" className={styles.chevronRightIcon} />}
         </Button>,
