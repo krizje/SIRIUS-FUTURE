@@ -16,10 +16,9 @@ body {
     padding: 0;
     scroll-behavior: smooth;
     line-height: 1.25;
-    background-color: vars.$color-white;
     position: relative;
     color: vars.$color-default;
-    overflow: hidden;
+    height: 100%;
 }
 
 a {
@@ -70,12 +69,6 @@ a:not([class]) {
 img {
     display: block;
     pointer-events: none;
-}
-
-img,
-svg {
-    max-width: 100%;
-    height: auto;
 }
 
 input,

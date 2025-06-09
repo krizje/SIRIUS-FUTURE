@@ -1,7 +1,21 @@
-@mixin Title20 {
+@mixin Title20Bold {
+    font-size: 20px;
+    line-height: 106%;
+    font-weight: bold;
+    letter-spacing: 0;
+}
+
+@mixin Title20Regular {
     font-size: 20px;
     line-height: 106%;
     font-weight: 400;
+    letter-spacing: 0;
+}
+
+@mixin Bold18 {
+    font-size: 18px;
+    line-height: 125%;
+    font-weight: bold;
     letter-spacing: 0;
 }
 
@@ -27,7 +41,7 @@
 }
 
 @mixin Bold14 {
-    font-size: 14;
+    font-size: 14px;
     line-height: 135%;
     font-weight: bold;
     letter-spacing: 0;

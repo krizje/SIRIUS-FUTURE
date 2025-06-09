@@ -1,0 +1,50 @@
+@use '@styles/typography' as typography;
+@use '@styles/variables' as vars;
+
+.root {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 64px;
+
+    @media screen and (width < vars.$breakpoint-large) {
+        padding: 0 24px;
+    }
+
+    @media screen and (width < vars.$breakpoint-medium) {
+        flex-wrap: wrap-reverse;
+        padding: 0 16px;
+        gap: 24px;
+    }
+}
+
+.step {
+    @include typography.Bold14;
+
+    color: vars.$color-muted;
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+
+    @media screen and (width < vars.$breakpoint-medium) {
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+}
+
+button.backButton {
+    background: vars.$color-blue-50;
+    color: vars.$color-default;
+
+    &:hover {
+        background: vars.$color-blue-70;
+    }
+}
+
+.chevronLeftIcon {
+    width: 24px;
+    height: 24px;
+    color: vars.$color-default;
+}

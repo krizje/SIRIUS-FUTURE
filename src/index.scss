@@ -13,13 +13,3 @@ body {
     padding: 0;
     position: relative;
 }
-
-body::before {
-    z-index: -1;
-    opacity: 1;
-    pointer-events: none;
-    background-repeat: repeat;
-    background-size: 100px;
-    filter: contrast(300%) brightness(150%);
-    mix-blend-mode: hard-light;
-}

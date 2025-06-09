@@ -1,0 +1,26 @@
+@use '@styles/variables' as vars;
+@use '@styles/typography' as typography;
+
+.root {
+    @include typography.Regular16;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.input {
+    @include typography.Regular14;
+
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid vars.$color-muted;
+    background: vars.$color-surface1;
+    transition: all vars.$transition-default;
+
+    &:hover,
+    &:focus,
+    &:not(:placeholder-shown) {
+        border-color: vars.$color-violet;
+    }
+}
