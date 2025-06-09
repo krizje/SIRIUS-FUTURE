@@ -1,54 +1,56 @@
-# React + TypeScript + Vite
+# sirius-future-test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Тестовый проект на React + TypeScript, собранный с помощью Vite.
 
-Currently, two official plugins are available:
+## 🛠️ Технологии
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 19
+- TypeScript
+- Vite
+- Redux Toolkit/Redux query
+- React Router 
+- React Hook Form
+- Zod
+- html2canvas + jsPDF (для генерации PDF)
+- Sass (SCSS)
+- ESLint, Prettier, Stylelint
+- Husky + lint-staged
 
-## Expanding the ESLint configuration
+## 📦 Установка
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+pnpm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Скрипты
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Команда               | Описание                                     |
+|-----------------------|----------------------------------------------|
+| `npm run dev`         | Запуск dev-сервера Vite                      |
+| `npm run build`       | Сборка проекта                               |
+| `npm run preview`     | Предпросмотр production-сборки               |
+| `npm run lint`        | Проверка кода ESLint                         |
+| `npm run format`      | Форматирование кода Prettier                 |
+| `npm run type-check`  | Проверка типов с помощью TypeScript          |
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+## ✅ Git-хуки
+
+Настроены через `husky` и `lint-staged`:
+- `pre-commit`: линтинг и автоформатирование файлов перед коммитом.
+
+## 🔧 Структура проекта (пример)
+
+```
+src/
+├── api/              # API запросы
+├── assets            # Шрифты, иконки
+├── components/       # UI-компоненты
+├── hooks/            # Кастомные хуки
+├── router/           # Маршруты
+├── store/            # Redux
+├── styles/           # Глобальные стили
+├── types/            # Типы
+├── utils/            # Утилиты
+├── views/            # Страницы приложения
+└── main.tsx          # Точка входа
 ```
