@@ -1,0 +1,19 @@
+@use '@styles/variables' as vars;
+
+.root {
+    @include vars.shadow;
+
+    width: vars.$container-large;
+    height: 100%;
+    border-radius: 20px;
+    padding-bottom: 32px;
+    background-color: vars.$color-surface1;
+
+    @media screen and (width < vars.$breakpoint-large) {
+        width: vars.$container-medium;
+    }
+
+    @media screen and (width < vars.$breakpoint-medium) {
+        width: vars.$container-small;
+    }
+}

@@ -1,9 +1,12 @@
 {
-    "extends": ["stylelint-config-standard"],
+    "extends": "stylelint-config-standard",
+    "plugins": ["stylelint-scss"],
     "rules": {
+        "media-query-no-invalid": null,
         "at-rule-no-unknown": null,
         "selector-class-pattern": null,
         "no-invalid-double-slash-comments": null,
-        "no-descending-specificity": null
+        "no-descending-specificity": null,
+        "media-feature-name-no-unknown": null
     }
 }

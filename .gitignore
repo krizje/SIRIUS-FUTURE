@@ -1,24 +1,61 @@
-# Logs
-logs
-*.log
+# Node.js
+node_modules/
+.pnpm/
+
+# TypeScript
+*.tsbuildinfo
+
+# Vite
+dist/
+.vite/
+*.local
+.vite-cache/
+
+# Environment variables
+.env
+
+# Log files
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-lerna-debug.log*
-
-node_modules
-dist
-dist-ssr
-*.local
 
 # Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
+.vscode/
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?
+
+# Eslint and Prettier
+.eslintcache
+.prettiercache
+
+# Stylelint
+.stylelintcache
+
+# Coverage directories
+coverage/
+
+# Build output
+build/
+out/
+
+# Sass cache
+.sass-cache/
+
+# Lock files
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
+
+# VS Code specific
+.vscode/*
+
+# Certs
+*.pem

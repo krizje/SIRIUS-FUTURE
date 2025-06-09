@@ -1,0 +1,55 @@
+@use '@styles/variables' as vars;
+@use '@styles/typography' as typography;
+
+.root {
+    flex: 1 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.title {
+    @include typography.Title20Bold;
+}
+
+.alertContainer {
+    @include typography.Regular14;
+
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 100px;
+    color: vars.$color-red;
+    background: vars.$color-red-50;
+
+    @media screen and (width < vars.$breakpoint-medium) {
+        border-radius: 8px;
+    }
+}
+
+.alertIcon {
+    min-width: 16px;
+    height: 16px;
+    color: vars.$color-red;
+}
+
+.inputs {
+    display: flex;
+    gap: 64px;
+
+    @media screen and (width < vars.$breakpoint-large) {
+        gap: 24px;
+    }
+
+    @media screen and (width < vars.$breakpoint-medium) {
+        flex-wrap: wrap;
+    }
+}
