@@ -6,6 +6,7 @@
     align-items: flex-end;
     justify-content: space-between;
     padding: 0 64px;
+    gap: 24px;
 
     @media screen and (width < vars.$breakpoint-large) {
         padding: 0 24px;
@@ -14,14 +15,59 @@
     @media screen and (width < vars.$breakpoint-medium) {
         flex-wrap: wrap-reverse;
         padding: 0 16px;
-        gap: 24px;
+    }
+
+    &:has(.downloadButton) {
+        gap: 8px;
+
+        .step {
+            align-self: flex-end;
+        }
+
+        @media screen and (width < vars.$breakpoint-large) {
+            flex-direction: column-reverse;
+
+            .step {
+                align-self: flex-start;
+            }
+
+            .buttons {
+                width: 100%;
+                justify-content: space-between;
+
+                button {
+                    width: 100%;
+                    padding: 8px 0;
+                    justify-content: center;
+                }
+            }
+        }
+
+        @media screen and (width < vars.$breakpoint-medium) {
+            .buttons {
+                flex-direction: column;
+            }
+
+            .step {
+                align-self: flex-end;
+            }
+        }
     }
 }
 
 .step {
     @include typography.Bold14;
 
+    align-self: flex-end;
     color: vars.$color-muted;
+
+    @media screen and (width < vars.$breakpoint-large) {
+        align-self: flex-end;
+    }
+
+    @media screen and (width < vars.$breakpoint-medium) {
+        align-self: flex-start;
+    }
 }
 
 .buttons {
@@ -30,11 +76,10 @@
 
     @media screen and (width < vars.$breakpoint-medium) {
         flex-wrap: wrap;
-        gap: 24px;
     }
 }
 
-button.backButton {
+.backButton {
     background: vars.$color-blue-50;
     color: vars.$color-default;
 

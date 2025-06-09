@@ -4,10 +4,7 @@ import eslint from 'vite-plugin-eslint2';
 import svgrPlugin from 'vite-plugin-svgr';
 import path from 'path';
 
-// https://vite.dev/config/
 export default defineConfig(({ mode }) => {
-    console.log(mode);
-    
     return {
         plugins: [react(), eslint(), svgrPlugin()],
 

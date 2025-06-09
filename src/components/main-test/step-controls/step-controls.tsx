@@ -27,7 +27,7 @@ export const StepControls: FC<StepControlsProps> = ({ step, maxSteps, button, on
                     </Button>
                 )}
                 {step == 3 && (
-                    <Button onClick={handleDownload}>
+                    <Button onClick={handleDownload} classes={{ root: styles.downloadButton }}>
                         Скачать отчет PDF {isLoading ? <Loader /> : <Icon name="download" />}
                     </Button>
                 )}
