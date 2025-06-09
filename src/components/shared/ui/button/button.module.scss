@@ -1,6 +1,9 @@
 @use '@styles/variables' as vars;
+@use '@styles/typography' as typography;
 
 .root {
+    @include typography.Regular16;
+
     display: flex;
     align-items: center;
     gap: 8px;
@@ -19,5 +22,10 @@
         background: vars.$color-disabled-btn;
         color: vars.$color-disabled;
         cursor: not-allowed;
+    }
+
+    @media screen and (width < vars.$breakpoint-medium) {
+        flex: 1 0 0;
+        justify-content: center;
     }
 }

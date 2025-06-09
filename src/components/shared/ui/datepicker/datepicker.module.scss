@@ -2,7 +2,7 @@
 @use '@styles/typography' as typography;
 
 .root {
-    width: fit-content;
+    max-width: fit-content;
     padding: 12px;
     border-radius: 6px;
     box-shadow: 0 0 12px 0 rgba(vars.$color-black, 0.11);
@@ -10,9 +10,10 @@
 }
 
 .day {
+    width: auto;
+
     @include typography.Regular14;
 
-    padding: 8px 12px;
     text-align: center;
     cursor: pointer;
 }

@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import { Controller, useFormContext } from 'react-hook-form';
 import { RadioButton } from '@components/shared/ui/radio-button/radio-button';
-import { radioButtonsAnswers } from '@utils/constants';
+import { radioButtonsAnswers } from '@utils/mock';
 
 import styles from './questionnaire-section.module.scss';
 
@@ -13,27 +13,6 @@ interface QuestionnaireSectionProps {
         questions: string[];
     };
 }
-
-// {radioButtonsAnswers.map((answer, childIndex) => {
-//                                     console.log(survey.q${section.key}_${parentIndex + 1})
-//                                     return (
-
-//                                     <Controller
-//                                         key={childIndex}
-//                                         control={control}
-//                                         name={`survey.q${section.key}_${parentIndex + 1}`}
-//                                         render={({ field: { onChange } }) => (
-//                                             <RadioButton
-//                                                 name={`group${parentIndex}`}
-//                                                 label={answer}
-//                                                 onChange={onChange}
-//                                                 value={answer}
-//                                             />
-//                                         )}
-//                                     />
-//                                     )
-
-//                                 })}
 
 export const QuestionnaireSection: FC<QuestionnaireSectionProps> = ({ section }) => {
     const { control } = useFormContext();
@@ -51,10 +30,10 @@ export const QuestionnaireSection: FC<QuestionnaireSectionProps> = ({ section })
                                         <Controller
                                             key={childIndex}
                                             control={control}
-                                            name={`survey.${section.key}_${parentIndex + 1}`}
+                                            name={`${section.key}_${parentIndex + 1}`}
                                             render={({ field: { onChange } }) => (
                                                 <RadioButton
-                                                    name={`survey.${section.key}_${parentIndex + 1}`}
+                                                    name={`${section.key}_${parentIndex + 1}`}
                                                     label={answer}
                                                     onChange={onChange}
                                                     value={answer}

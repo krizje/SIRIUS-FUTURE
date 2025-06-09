@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 import styles from './main-test.module.scss';
 import { FormControls } from '@components/main-test/form-controls/form-controls';
 
-const MainTest: FC = () => {
+const MainTestView: FC = () => {
     return (
         <div className={styles.root}>
             <FormControls />
@@ -11,4 +11,4 @@ const MainTest: FC = () => {
     );
 };
 
-export default MainTest;
+export default MainTestView;

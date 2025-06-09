@@ -10,7 +10,7 @@ export type SurveyDto = z.infer<typeof SurveySchema>;
 const Gender = z.enum(['Мальчик', 'Девочка']);
 const Date = z.string().regex(/^(0[1-9]|[12][0-9]|3[01])\.(0[1-9]|1[0-2])\.(19|20)\d{2}$/);
 
-export const CreateSurveySchema = z.object({
+export const SurveyFieldsSchema = z.object({
     childName: z.string().nonempty().min(3),
     childDOB: Date,
     childGender: Gender,
@@ -74,11 +74,11 @@ export const CreateSurveySchema = z.object({
     emotionalState: z.string(),
 });
 
-export type CreateSurveyDto = z.infer<typeof CreateSurveySchema>;
+export type SurveyFieldsDto = z.infer<typeof SurveyFieldsSchema>;
 
-export const FormValuesSchema = z.object({
-    files: z.array(z.instanceof(File)).length(3),
-    survey: CreateSurveySchema,
+export const CreateSurveySchema = z.object({
+    task_id: z.string(),
+    survey: SurveyFieldsSchema,
 });
 
-export type FormValuesDto = z.infer<typeof FormValuesSchema>;
+export type CreateSurveyDto = z.infer<typeof CreateSurveySchema>;

@@ -29,6 +29,9 @@
 
 .radioGroup {
     display: flex;
-    flex-wrap: wrap;
     gap: 24px;
+
+    @media screen and (width < vars.$breakpoint-medium) {
+        flex-direction: column;
+    }
 }

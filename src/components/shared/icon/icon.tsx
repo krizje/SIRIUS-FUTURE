@@ -8,6 +8,8 @@ import LikeIcon from '@assets/icons/like-icon.svg?react';
 import FlagIcon from '@assets/icons/flag-icon.svg?react';
 import ChevronLeftIcon from '@assets/icons/chevron-left.svg?react';
 import ChevronRightIcon from '@assets/icons/chevron-right.svg?react';
+import DownloadIcon from '@assets/icons/download-icon.svg?react';
+import ShareIcon from '@assets/icons/share-icon.svg?react';
 
 export const icons = {
     upload: UploadIcon,
@@ -18,6 +20,8 @@ export const icons = {
     flag: FlagIcon,
     chevron_left: ChevronLeftIcon,
     chevron_right: ChevronRightIcon,
+    download: DownloadIcon,
+    share: ShareIcon,
 };
 
 export type IconKind = keyof typeof icons;

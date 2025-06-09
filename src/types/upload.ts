@@ -7,6 +7,8 @@ export const UploadSchema = z.object({
 
 export type UploadDto = z.infer<typeof UploadSchema>;
 
-export const CreateUploadSchema = z.instanceof(FormData);
+export const CreateUploadSchema = z.object({
+    files: z.array(z.instanceof(File)).min(3).max(3),
+});
 
 export type CreateUploadDto = z.infer<typeof CreateUploadSchema>;

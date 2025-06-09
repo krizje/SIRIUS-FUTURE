@@ -6,6 +6,16 @@
     align-items: flex-end;
     justify-content: space-between;
     padding: 0 64px;
+
+    @media screen and (width < vars.$breakpoint-large) {
+        padding: 0 24px;
+    }
+
+    @media screen and (width < vars.$breakpoint-medium) {
+        flex-wrap: wrap-reverse;
+        padding: 0 16px;
+        gap: 24px;
+    }
 }
 
 .step {
@@ -17,6 +27,11 @@
 .buttons {
     display: flex;
     gap: 8px;
+
+    @media screen and (width < vars.$breakpoint-medium) {
+        flex-wrap: wrap;
+        gap: 24px;
+    }
 }
 
 button.backButton {

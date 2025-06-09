@@ -18,8 +18,6 @@ const surveyService = baseApi.injectEndpoints({
             },
 
             transformResponse: (response: unknown) => {
-                console.log(response);
-
                 return validatePayload(SurveySchema, response);
             },
         }),

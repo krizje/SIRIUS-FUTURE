@@ -1,18 +1,19 @@
 import baseApi from '@api/base-api';
 
-import { UploadImagesPayload, UploadImagesResponse } from '@api/protocol';
-import { CreateUploadSchema, UploadSchema } from '@shared-types/upload';
+import { UploadImagesResponse } from '@api/protocol';
+import { UploadSchema } from '@shared-types/upload';
 import { validatePayload } from '@utils/zod-validator';
+//import { z } from 'zod';
 
 const uploadService = baseApi.injectEndpoints({
     endpoints: (builder) => ({
-        uploadImages: builder.mutation<UploadImagesResponse, UploadImagesPayload>({
+        uploadImages: builder.mutation<UploadImagesResponse, FormData>({
             query: (body) => {
-                const validatedBody = validatePayload(CreateUploadSchema, body);
+                //const validatedBody = validatePayload(z.instanceof(FormData), body);
                 return {
                     url: '/upload',
                     method: 'POST',
-                    body: validatedBody,
+                    body: body,
                 };
             },
 

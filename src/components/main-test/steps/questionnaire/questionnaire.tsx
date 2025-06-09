@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import { questionnaire } from '@utils/constants';
+import { questionnaire } from '@utils/mock';
 
 import { Input } from '@components/shared/ui/input/input';
 import { Controller, useFormContext } from 'react-hook-form';
@@ -27,22 +27,20 @@ export const Questionnaire: FC = () => {
                 <div className={styles.inputs}>
                     <Controller
                         control={control}
-                        name="survey.childName"
-                        render={({ field: { onChange } }) => (
-                            <Input onChange={onChange} labelText="Имя ребенка" placeholder=" " />
-                        )}
+                        name="childName"
+                        render={({ field }) => <Input {...field} labelText="Имя ребенка" placeholder=" " />}
                     />
 
                     <Controller
                         control={control}
-                        name="survey.childDOB"
-                        render={({ field: { onChange, value } }) => {
+                        name="childDOB"
+                        render={({ field }) => {
                             return (
                                 <div className={styles.dateWrapper}>
                                     <Input
                                         classes={{ input: styles.dateInput }}
+                                        {...field}
                                         labelText="Дата рождения ребенка"
-                                        value={value}
                                         readOnly
                                         onClick={() => setIsDatePickerOpen(true)}
                                     />
@@ -54,7 +52,7 @@ export const Questionnaire: FC = () => {
                                                 locale={ru}
                                                 onSelect={(date) => {
                                                     if (date) {
-                                                        onChange(format(date, 'MM.dd.yyyy'));
+                                                        field.onChange(format(date, 'MM.dd.yyyy'));
                                                         setIsDatePickerOpen(false);
                                                     }
                                                 }}
@@ -71,7 +69,7 @@ export const Questionnaire: FC = () => {
                     <p className={styles.text}>Пол ребёнка</p>
                     <Controller
                         control={control}
-                        name="survey.childGender"
+                        name="childGender"
                         render={({ field: { onChange } }) => {
                             return (
                                 <div className={styles.radioGroup}>
@@ -91,9 +89,9 @@ export const Questionnaire: FC = () => {
 
                 <Controller
                     control={control}
-                    name="survey.parentName"
-                    render={({ field: { onChange } }) => (
-                        <Input onChange={onChange} labelText="Имя родителя, заполняющего анкету" placeholder=" " />
+                    name="parentName"
+                    render={({ field }) => (
+                        <Input {...field} labelText="Имя родителя, заполняющего анкету" placeholder=" " />
                     )}
                 />
             </section>
@@ -115,7 +113,7 @@ export const Questionnaire: FC = () => {
                                     <Controller
                                         key={index}
                                         control={control}
-                                        name="survey.emotionalState"
+                                        name="emotionalState"
                                         render={({ field: { onChange } }) => {
                                             return (
                                                 <RadioButton
@@ -141,8 +139,8 @@ export const Questionnaire: FC = () => {
                             <p className={styles.text}>{question}</p>
                             <Controller
                                 control={control}
-                                name={`survey.q5_${(index + 1) as 1 | 2 | 3 | 4}`}
-                                render={({ field: { onChange } }) => <Textarea height={96} onChange={onChange} />}
+                                name={`q5_${index + 1}`}
+                                render={({ field }) => <Textarea height={96} {...field} />}
                             />
                         </div>
                     ))}
